@@ -1,3 +1,4 @@
+import FAQSection from "./sections/FAQSection";
 import HeroSection from "./sections/HeroSection";
 import ReviewsSection from "./sections/ReviewsSection";
 import SpecialtiesSection from "./sections/SpecialtiesSection";
@@ -10,6 +11,7 @@ function App() {
       <WhyChooseMySection />
       <SpecialtiesSection />
       <ReviewsSection />
+      <FAQSection />
     </div>
   );
 }

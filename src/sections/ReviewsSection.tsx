@@ -42,7 +42,7 @@ export default function ReviewsSection() {
               key={id}
               className="rounded-lg w-[350px] border flex flex-col border-white/10 p-4 gap-2 shadow-[0_8px_20px_rgba(0,0,0,0.3)]"
             >
-              <p className="h-[160px]">{assessment}</p>
+              <p className="h-[160px] font-lato">{assessment}</p>
 
               <div className="flex items-center gap-2">
                 {avatar_url && avatar_url?.length > 0 ? (
