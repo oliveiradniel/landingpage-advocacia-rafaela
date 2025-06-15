@@ -43,7 +43,7 @@ export default function HeroSection() {
         </div>
         <img
           src="/rafaela-photo.png"
-          alt="Foto da Rafaela"
+          alt="Rafaela"
           width={400}
           className="mask-b-from-70%"
         />
