@@ -1,7 +1,9 @@
+import HeroSection from "./sections/HeroSection";
+
 function App() {
   return (
     <div>
-      <h1>landing page</h1>
+      <HeroSection />
     </div>
   );
 }
