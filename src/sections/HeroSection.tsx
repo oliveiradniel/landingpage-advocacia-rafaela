@@ -2,7 +2,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
-    <div className="bg-almost-black relative overflow-hidden">
+    <div className="relative overflow-hidden">
       <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-vivid-blue/10 blur-3xl pointer-events-none rounded-full z-10" />
 
       <div className="absolute bottom-[] right-[-10%] w-[600px] h-[600px] bg-vivid-blue/10 blur-3xl pointer-events-none rounded-full z-10" />
