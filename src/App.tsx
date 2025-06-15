@@ -3,7 +3,7 @@ import WhyChooseMySection from "./sections/WhyChooseMySection";
 
 function App() {
   return (
-    <div>
+    <div className="bg-">
       <HeroSection />
       <WhyChooseMySection />
     </div>
