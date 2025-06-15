@@ -2,7 +2,9 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function SpecialtiesSection() {
   return (
-    <div className="pt-32 flex gap-8 flex-col items-center">
+    <div className="pt-32 flex gap-8 flex-col items-center relative">
+      <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-vivid-blue/4 blur-3xl pointer-events-none rounded-full z-10" />
+
       <h1 className="text-[32px] font-inter font-bold">
         Principais <span className="text-vivid-blue">áreas de atuação</span>
       </h1>
