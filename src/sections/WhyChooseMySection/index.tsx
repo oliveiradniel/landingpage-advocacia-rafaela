@@ -6,7 +6,7 @@ import CardInformation from "./components/CardInformation";
 
 export default function WhyChooseMySection() {
   return (
-    <div className="pt-26 flex flex-col items-center relative">
+    <div className="pt-26 flex flex-col items-center relative overflow-hidden">
       <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-vivid-blue/4 blur-3xl pointer-events-none rounded-full z-10" />
 
       <div className="absolute translate-y-[50%] right-[-10%] w-[600px] h-[600px] bg-vivid-blue/4 blur-3xl pointer-events-none rounded-full z-10" />

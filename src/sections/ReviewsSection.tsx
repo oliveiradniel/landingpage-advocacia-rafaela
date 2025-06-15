@@ -30,11 +30,7 @@ export default function ReviewsSection() {
   ];
 
   return (
-    <div className="pt-32 flex items-center flex-col relative">
-      <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-vivid-blue/4 blur-3xl pointer-events-none rounded-full z-10" />
-
-      <div className="absolute bottom-[] right-[-10%] w-[600px] h-[600px] bg-vivid-blue/4 blur-3xl pointer-events-none rounded-full z-10" />
-
+    <div className="pt-32 flex items-center flex-col relative ">
       <h1 className="text-[32px] font-inter font-bold">
         O que <span className="text-vivid-blue">nossos cliente</span> dizem
       </h1>
