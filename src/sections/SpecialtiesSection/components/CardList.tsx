@@ -5,13 +5,13 @@ import InformationCard from "./InformationCard";
 export default function CardList() {
   return (
     <ul
-      aria-label="Principais motivos para escolher minha atuação"
-      className="flex justify-center flex-col sm:flex-row gap-12 lg:gap-4 flex-wrap"
+      aria-label="Lista de principais áreas de atuação"
+      className="flex gap-8 flex-col sm:flex-row justify-center flex-wrap"
     >
-      {informationCardMocks.map(({ Icon, title, description }, index) => (
+      {informationCardMocks.map(({ pathname, title, description }, index) => (
         <InformationCard
           key={index}
-          Icon={Icon}
+          pathname={pathname}
           title={title}
           description={description}
         />
