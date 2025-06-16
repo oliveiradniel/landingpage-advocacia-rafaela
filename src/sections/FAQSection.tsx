@@ -62,50 +62,67 @@ export default function FAQSection() {
   };
 
   return (
-    <div className="pt-32 flex gap-8 flex-col items-center relative">
-      <h1 className="text-[clamp(20px,4vw,32px)] font-inter font-bold">
+    <section
+      aria-labelledby="faq"
+      className="pt-32 flex gap-8 flex-col items-center relative"
+    >
+      <h2 id="faq" className="text-[clamp(20px,4vw,32px)] font-inter font-bold">
         <span className="text-vivid-blue">Perguntas </span> frequentes
-      </h1>
+      </h2>
 
-      <div className="flex gap-2 p-2 flex-col w-full md:w-[800px] max-w-[700px]">
+      <ul
+        aria-label="Lista de perguntas frequentes"
+        className="flex gap-2 p-2 flex-col w-full md:w-[800px] max-w-[700px]"
+      >
         {mockFAQs.map(({ question, response }, index) => (
-          <div
+          <li
             key={index}
-            role="button"
-            tabIndex={0}
-            onClick={() => toggleFAQ(index)}
-            className={`border flex-col group transition-all duration-300 flex gap-4 cursor-pointer rounded-md pl-10 pr-4 py-3 ${
+            className={`flex border pl-10 pr-4 py-3 transition-all duration-300 ease-in-out rounded-md flex-col w-full gap-2 ${
               openIndex === index
                 ? "border-white/20"
                 : "border-white/30 hover:border-white/20"
             }`}
           >
-            <div className="flex items-center gap-4 justify-between">
-              <h6 className="font-inter text-sm">{question}</h6>
+            <button
+              id={`faq-button-${index}`}
+              aria-label={`${question} - pressione para expandir ou recolher a resposta`}
+              aria-expanded={openIndex === index}
+              aria-controls={`faq-panel-${index}`}
+              onClick={() => toggleFAQ(index)}
+              className={`justify-between group w-full flex gap-4 cursor-pointer`}
+            >
+              <p className="font-inter text-sm">{question}</p>
               <IoIosArrowDown
                 size={22}
+                aria-hidden="true"
                 className={`text-vivid-blue transition-transform duration-300 ${
                   openIndex === index ? "rotate-180" : ""
                 }`}
               />
-            </div>
+            </button>
 
             {openIndex === index && (
-              <p className="text-white/80 font-lato text-sm leading-relaxed">
+              <div
+                id={`faq-panel-${index}`}
+                role="region"
+                aria-labelledby={`faq-button-${index}`}
+                className="text-white/80 font-lato text-sm leading-relaxed"
+              >
                 {response}
-              </p>
+              </div>
             )}
-          </div>
+          </li>
         ))}
 
         <button
           type="button"
+          aria-label="Contato via WhatsApp para defesa trabalhista"
           className="bg-vivid-blue w-full mt-2 p-4 font-bold rounded-md flex items-center justify-center gap-2 cursor-pointer hover:bg-vivid-blue/90 transition-colors duration-300 ease-in-out shadow-[0_8px_20px_rgba(0,0,0,0.3)]"
         >
           <FaWhatsapp size={22} />
           Quero defesa especializada
         </button>
-      </div>
-    </div>
+      </ul>
+    </section>
   );
 }
