@@ -3,14 +3,12 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function SpecialtiesSection() {
   return (
     <div className="pt-32 flex gap-8 flex-col items-center relative">
-      <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-vivid-blue/4 blur-3xl pointer-events-none rounded-full z-10" />
-
-      <h1 className="text-[32px] font-inter font-bold">
+      <h1 className="text-[clamp(20px,4vw,32px)] font-inter font-bold">
         Principais <span className="text-vivid-blue">áreas de atuação</span>
       </h1>
 
       <div className="flex flex-col gap-8 items-center">
-        <div className="flex gap-8">
+        <div className="flex gap-8 flex-col sm:flex-row justify-center flex-wrap">
           <div className="max-w-[280px] roundend-lg shadow-[0_8px_20px_rgba(0,0,0,0.3)]">
             <img
               src="/labor-complaints.jpg"
@@ -78,9 +76,9 @@ export default function SpecialtiesSection() {
 
         <button
           type="button"
-          className="bg-vivid-blue w-[80%] p-4 font-bold rounded-md flex items-center justify-center gap-2 cursor-pointer hover:bg-vivid-blue/90 transition-colors duration-300 ease-in-out shadow-[0_8px_20px_rgba(0,0,0,0.3)]"
+          className="bg-vivid-blue sm:w-[80%] w-full p-4 font-bold rounded-md flex items-center justify-center gap-2 cursor-pointer hover:bg-vivid-blue/90 transition-colors duration-300 ease-in-out shadow-[0_8px_20px_rgba(0,0,0,0.3)]"
         >
-          <FaWhatsapp size={22} />
+          <FaWhatsapp size={22} className="hidden sm:inline-flex" />
           Quero defesa especializada
         </button>
       </div>

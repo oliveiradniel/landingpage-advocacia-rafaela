@@ -31,11 +31,11 @@ export default function ReviewsSection() {
 
   return (
     <div className="pt-32 flex items-center flex-col relative ">
-      <h1 className="text-[32px] font-inter font-bold">
+      <h1 className="text-[clamp(20px,4vw,32px)] font-inter font-bold">
         O que <span className="text-vivid-blue">nossos cliente</span> dizem
       </h1>
 
-      <div className="mt-8 flex gap-4">
+      <div className="mt-8 flex gap-4 flex-col sm:flex-row justify-center flex-wrap">
         {mockDepoiments.map(
           ({ id, name, avatar_url, numberOfStars, assessment }) => (
             <div

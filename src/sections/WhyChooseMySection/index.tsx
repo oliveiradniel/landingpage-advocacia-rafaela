@@ -6,12 +6,8 @@ import CardInformation from "./components/CardInformation";
 
 export default function WhyChooseMySection() {
   return (
-    <div className="pt-26 flex flex-col items-center relative overflow-hidden">
-      <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-vivid-blue/4 blur-3xl pointer-events-none rounded-full z-10" />
-
-      <div className="absolute translate-y-[50%] right-[-10%] w-[600px] h-[600px] bg-vivid-blue/4 blur-3xl pointer-events-none rounded-full z-10" />
-
-      <div className="flex justify-center gap-4">
+    <div className="pt-6 sm:pt-26 flex flex-col items-center relative overflow-hidden">
+      <div className="flex justify-center flex-col sm:flex-row gap-12 lg:gap-4 flex-wrap">
         <CardInformation
           Icon={GiInjustice}
           title="Compromisso com a Sua Justiça"
@@ -38,7 +34,7 @@ export default function WhyChooseMySection() {
       </div>
 
       <div className="mt-32 flex gap-16">
-        <div className="relative flex w-[370px] max-w-[370px] h-[400px]">
+        <div className="relative hidden lg:flex w-[370px] max-w-[370px] h-[400px]">
           <img
             src="/documents.png"
             alt="Documentos"
@@ -54,8 +50,8 @@ export default function WhyChooseMySection() {
           />
         </div>
 
-        <div className="max-w-[520px]">
-          <h1 className="text-[32px] font-inter font-bold">
+        <div className="max-w-[520px] p-4 sm:p-0">
+          <h1 className="text-[clamp(16px,4vw,32px)] font-inter font-bold">
             Por que escolher{" "}
             <span className="text-vivid-blue">minha atuação</span> na defesa dos
             direitos trabalhistas?
