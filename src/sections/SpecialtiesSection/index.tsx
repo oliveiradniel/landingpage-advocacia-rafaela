@@ -2,17 +2,24 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function SpecialtiesSection() {
   return (
-    <div className="pt-32 flex gap-8 flex-col items-center relative">
-      <h1 className="text-[clamp(20px,4vw,32px)] font-inter font-bold">
+    <div
+      aria-labelledby="specialties"
+      className="pt-32 flex gap-8 flex-col items-center relative"
+    >
+      <h1
+        id="specialties"
+        className="text-[clamp(20px,4vw,32px)] font-inter font-bold"
+      >
         Principais <span className="text-vivid-blue">áreas de atuação</span>
       </h1>
 
       <div className="flex flex-col gap-8 items-center">
         <div className="flex gap-8 flex-col sm:flex-row justify-center flex-wrap">
-          <div className="max-w-[280px] roundend-lg shadow-[0_8px_20px_rgba(0,0,0,0.3)]">
+          <div className="max-w-[280px] rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.3)]">
             <img
               src="/labor-complaints.jpg"
-              alt="Reclamações Trabalhistas"
+              alt=""
+              aria-hidden="true"
               className="w-full h-[220px] object-cover rounded-t-lg"
             />
 
@@ -31,10 +38,11 @@ export default function SpecialtiesSection() {
             </div>
           </div>
 
-          <div className="max-w-[280px] roundend-lg shadow-[0_8px_20px_rgba(0,0,0,0.3)]">
+          <div className="max-w-[280px] rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.3)]">
             <img
               src="/moral-harassment.jpg"
-              alt="Reclamações Trabalhistas"
+              alt=""
+              aria-hidden="true"
               className="w-full h-[220px] object-cover rounded-t-lg"
             />
 
@@ -52,10 +60,11 @@ export default function SpecialtiesSection() {
             </div>
           </div>
 
-          <div className="max-w-[280px] roundend-lg shadow-[0_8px_20px_rgba(0,0,0,0.3)]">
+          <div className="max-w-[280px] rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.3)]">
             <img
               src="/work-accident.jpg"
-              alt="Reclamações Trabalhistas"
+              alt=""
+              aria-hidden="true"
               className="w-full h-[220px] object-cover rounded-t-lg"
             />
 
@@ -76,6 +85,7 @@ export default function SpecialtiesSection() {
 
         <button
           type="button"
+          aria-label="Contato via WhatsApp para defesa trabalhista"
           className="bg-vivid-blue sm:w-[80%] w-full p-4 font-bold rounded-md flex items-center justify-center gap-2 cursor-pointer hover:bg-vivid-blue/90 transition-colors duration-300 ease-in-out shadow-[0_8px_20px_rgba(0,0,0,0.3)]"
         >
           <FaWhatsapp size={22} className="hidden sm:inline-flex" />
