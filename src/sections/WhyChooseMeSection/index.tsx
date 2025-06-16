@@ -6,8 +6,14 @@ import CardInformation from "./components/CardInformation";
 
 export default function WhyChooseMySection() {
   return (
-    <div className="pt-6 sm:pt-26 flex flex-col items-center relative overflow-hidden">
-      <div className="flex justify-center flex-col sm:flex-row gap-12 lg:gap-4 flex-wrap">
+    <div
+      aria-labelledby="why-choose-me"
+      className="pt-6 sm:pt-24 flex flex-col items-center relative overflow-hidden"
+    >
+      <ul
+        aria-label="Principais motivos para escolher minha atuação"
+        className="flex justify-center flex-col sm:flex-row gap-12 lg:gap-4 flex-wrap"
+      >
         <CardInformation
           Icon={GiInjustice}
           title="Compromisso com a Sua Justiça"
@@ -31,27 +37,30 @@ export default function WhyChooseMySection() {
             muitas vezes, de injustiça. Meu compromisso é ouvir você, entender
             sua realidade e lutar para garantir o que é seu por direito."
         />
-      </div>
+      </ul>
 
       <div className="mt-32 flex gap-16">
         <div className="relative hidden lg:flex w-[370px] max-w-[370px] h-[400px]">
           <img
             src="/documents.png"
-            alt="Documentos"
+            alt=""
+            aria-hidden="true"
             width={200}
             height={200}
-            className="rounded-lg absolute top-0 left-0 shadow-[0_8px_20px_rgba(0,0,0,0.3)]"
+            className="rounded-lg absolute top-0 left-0 shadow-[0_8px_20px_rgba(0,0,0,0.3)] w-[200px] h-auto"
           />
           <img
             src="/rafaela-photo2.png"
-            alt="Rafaela"
-            width={200}
-            className="rounded-lg absolute bottom-0 right-0 shadow-[0_8px_20px_rgba(0,0,0,0.3)]"
+            alt="Rafaela Souza, advogada trabalhista especializada na defesa de direitos dos trabalhadores"
+            className="rounded-lg absolute bottom-0 right-0 shadow-[0_8px_20px_rgba(0,0,0,0.3)] w-[200px] h-auto"
           />
         </div>
 
         <div className="max-w-[520px] p-4 sm:p-0">
-          <h1 className="text-[clamp(16px,4vw,32px)] font-inter font-bold">
+          <h1
+            id="why-choose-me"
+            className="text-[clamp(16px,4vw,32px)] font-inter font-bold"
+          >
             Por que escolher{" "}
             <span className="text-vivid-blue">minha atuação</span> na defesa dos
             direitos trabalhistas?

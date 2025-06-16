@@ -3,13 +3,13 @@ import Footer from "./sections/Footer";
 import HeroSection from "./sections/HeroSection";
 import ReviewsSection from "./sections/ReviewsSection";
 import SpecialtiesSection from "./sections/SpecialtiesSection";
-import WhyChooseMySection from "./sections/WhyChooseMySection";
+import WhyChooseMeSection from "./sections/WhyChooseMeSection";
 
 function App() {
   return (
     <div>
       <HeroSection />
-      <WhyChooseMySection />
+      <WhyChooseMeSection />
       <SpecialtiesSection />
       <ReviewsSection />
       <FAQSection />
