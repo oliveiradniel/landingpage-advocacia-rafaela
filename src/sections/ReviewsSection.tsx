@@ -4,7 +4,6 @@ import { IoMdStar } from "react-icons/io";
 export default function ReviewsSection() {
   const mockDepoiments = [
     {
-      id: Math.random(),
       name: "Camila Ferreira",
       avatar_url: "/camila-ferreira.jpg",
       numberOfStars: 4,
@@ -12,7 +11,6 @@ export default function ReviewsSection() {
         "Profissional incrível! Resolveu meu caso com uma rapidez que eu nem esperava. Consegui receber todos os meus direitos sem dor de cabeça.",
     },
     {
-      id: Math.random(),
       name: "Carlos Alberto",
       avatar_url: "/carlos-alberto.jpg",
       numberOfStars: 5,
@@ -20,7 +18,6 @@ export default function ReviewsSection() {
         "Muito atenciosa e dedicada. Me explicou tudo com uma linguagem simples e me deixou segura durante todo o processo. Consegui a indenização que precisava e me senti muito acolhida.",
     },
     {
-      id: Math.random(),
       name: "Patrícia Souza",
       avatar_url: "/patricia-souza.jpg",
       numberOfStars: 5,
@@ -30,16 +27,25 @@ export default function ReviewsSection() {
   ];
 
   return (
-    <div className="pt-32 flex items-center flex-col relative ">
-      <h1 className="text-[clamp(20px,4vw,32px)] font-inter font-bold">
+    <section
+      aria-labelledby="review"
+      className="pt-32 flex items-center flex-col relative "
+    >
+      <h2
+        id="review"
+        className="text-[clamp(20px,4vw,32px)] font-inter font-bold"
+      >
         O que <span className="text-vivid-blue">nossos cliente</span> dizem
-      </h1>
+      </h2>
 
-      <div className="mt-8 flex gap-4 flex-col sm:flex-row justify-center flex-wrap">
+      <ul
+        aria-label="Lista de depoimentos de clientes sobre os serviços"
+        className="mt-8 flex gap-4 flex-col sm:flex-row justify-center flex-wrap"
+      >
         {mockDepoiments.map(
-          ({ id, name, avatar_url, numberOfStars, assessment }) => (
-            <div
-              key={id}
+          ({ name, avatar_url, numberOfStars, assessment }, index) => (
+            <li
+              key={index}
               className="rounded-lg w-[350px] border flex flex-col border-white/10 p-4 gap-2 shadow-[0_8px_20px_rgba(0,0,0,0.3)]"
             >
               <p className="h-[160px] font-lato">{assessment}</p>
@@ -48,26 +54,33 @@ export default function ReviewsSection() {
                 {avatar_url && avatar_url?.length > 0 ? (
                   <img
                     src={avatar_url}
-                    alt="Foto de Perfil"
+                    alt={`Foto de perfil de ${name}`}
                     className="w-[42px] h-[42px] rounded-full object-cover"
                   />
                 ) : (
-                  <FaUser size={28} height={28} />
+                  <FaUser aria-hidden="true" size={28} height={28} />
                 )}
 
                 <div className="flex flex-col">
                   <p className="font-lato font-bold">{name}</p>
-                  <div className="flex">
+                  <div
+                    aria-label={`${numberOfStars} de 5 estrelas`}
+                    className="flex"
+                  >
                     {Array.from({ length: numberOfStars }).map((_, i) => (
-                      <IoMdStar key={i} className="text-yellow-300" />
+                      <IoMdStar
+                        key={i}
+                        aria-hidden="true"
+                        className="text-yellow-300"
+                      />
                     ))}
                   </div>
                 </div>
               </div>
-            </div>
+            </li>
           )
         )}
-      </div>
-    </div>
+      </ul>
+    </section>
   );
 }
