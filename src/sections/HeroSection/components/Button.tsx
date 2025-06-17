@@ -5,7 +5,7 @@ export default function Button() {
     <button
       type="button"
       aria-label="Contato via WhatsApp para defesa trabalhista"
-      className="bg-vivid-blue p-4 mt-8 font-lato font-bold rounded-md flex items-center cursor-pointer hover:bg-vivid-blue/90 transition-colors duration-300 ease-in-out shadow-[0_8px_20px_rgba(0,0,0,0.3)]"
+      className="bg-vivid-blue sm:text-base text-[14px] sm:p-4 p-2 mt-8 font-lato font-bold rounded-md flex items-center cursor-pointer hover:bg-vivid-blue/90 transition-colors duration-300 ease-in-out shadow-[0_8px_20px_rgba(0,0,0,0.3)]"
     >
       <FaWhatsapp
         size={22}

@@ -14,7 +14,7 @@ export default function WhyChooseMySection() {
       <div className="mt-32 flex gap-16">
         <Images />
 
-        <div className="max-w-[520px] p-4 sm:p-0">
+        <div className="max-w-[520px] px-8 p-4 sm:p-0">
           <Title />
 
           <Description />

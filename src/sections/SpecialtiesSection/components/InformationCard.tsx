@@ -10,7 +10,7 @@ export default function InformationCard({
   description,
 }: IInformationCard) {
   return (
-    <li className="max-w-[280px] rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.3)]">
+    <li className="max-w-[326px] rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.3)]">
       <img
         src={pathname}
         alt=""

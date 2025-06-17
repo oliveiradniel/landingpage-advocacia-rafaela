@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="flex pb-8 justify-center flex-col items-center gap-4">
       <div className="flex justify-center items-center">
-        <img src="/logo.png" alt="Logo" className="w-22" />
+        <img aria-hidden="true" src="/logo.png" alt="" className="w-22" />
         <p className="flex flex-col font-lato font-bold text-lg">
           <span>Rafaela</span>
           <span>Souza</span>
