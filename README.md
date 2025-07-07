@@ -2,7 +2,7 @@
 
 Landing page institucional desenvolvida para a advogada Rafaela Souza, com foco em apresentar sua atuação profissional, especialidades jurídicas e facilitar o contato com potenciais clientes.
 
-![Captura de tela do site](./screencapture.png)
+![Captura de tela do site](https://raw.githubusercontent.com/oliveiradniel/landingpage-advocacia-rafaela/refs/heads/main/public/screencapture.png)
 
 ---
 
